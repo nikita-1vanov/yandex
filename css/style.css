@@ -8,13 +8,12 @@ html {
 body {
     display:flex;
     flex-direction: column;
-    background-color: #efefef;
+    //background-color: #efefef;
     max-width: 1920px;
     margin: auto;
     color: #120e27;
     height: 100%;
     min-width: 620px;
-    font-family: "PTSerif Regular";
     font-size: 20px;
     line-height: 1.5;
     padding: 0;
@@ -29,6 +28,9 @@ main {
     flex-grow:1;
 }
 
+footer {
+    border-top: solid #dcdcdc 2px;
+}
 
 @font-face {
     font-family: "Arial;
@@ -43,18 +45,27 @@ main {
     height: auto;
 }
 
+.name{
+    font-family: "Arial";
+    font-size: 40px;
+    margin: 0px;
+}
+
+.name p {
+    line-height: 20px;
+}
 
 .zag {
     font-family: "Arial";
     font-size: 20px;
-    /*font-weight: bold;*/
+    font-weight: bold;
 }
 
-.desc {
+.desk {
     font-family: "Arial";
     font-size: 16px;
     font-style: italic;
-    color: gray;
+    color: white;
 }
 
 
@@ -89,26 +100,16 @@ header {
     text-decoration: none;
     padding: 6px 30px 6px 30px;
     color: black;
-    /*margin-left: 2px;*/
     border: solid  #dcdcdc 1px;
-    /*border-radius: 4px;*/
+}
+
+.menu a:hover {
+    background-color: blanchedalmond;
 }
 
 .logo {
     margin: 20px 0 0 30px;
     font-size: 30px;
-}
-
-.container {
-    padding-left: 12%;
-    padding-right: 13%;
-    width: 75%;
-    height: auto;
-}
-
-footer {
-    background-color: gray;
-    height: 100px;
 }
 
 /*---------FLEX----------*/
@@ -129,6 +130,10 @@ footer {
     flex-wrap: wrap;
 }
 
+.offers {
+    padding-bottom: 30px;
+}
+
 .offer {
     width: 23%;
     margin-left: 20px;
@@ -136,8 +141,36 @@ footer {
     margin-top: 50px;
     min-width: 285px;
     cursor: pointer;
+
+}
+
+.offer:hover .zag {
+    color: red;
 }
 
 .offer img {
     width: 100%;
+}
+
+footer img {
+    width: 70px;
+    padding: 20px 10px 20px 10px;
+    cursor: pointer;
+}
+
+footer img:hover {
+    width: 80px;
+    padding: 15px 5px 15px 5px;
+}
+
+footer p {
+    font-family: "Arial";
+    font-size: 15px;
+    color: grey;
+    margin: 0;
+    text-align: center;
+}
+
+.info {
+    margin-bottom: 15px;
 }
