@@ -13,7 +13,7 @@ body {
     margin: auto;
     color: #120e27;
     height: 100%;
-    min-width: 620px;
+    min-width: 560px;
     font-size: 20px;
     line-height: 1.5;
     padding: 0;
@@ -33,7 +33,7 @@ footer {
 }
 
 @font-face {
-    font-family: "Arial";
+    font-family: "Arial;
     src:url(../fonts/arial.ttf);
 }
 
@@ -52,7 +52,7 @@ footer {
 }
 
 .name p {
-    line-height: 20px;
+    line-height: 40px;
 }
 
 .zag {
@@ -61,11 +61,10 @@ footer {
     font-weight: bold;
 }
 
-.desk {
+.desc {
     font-family: "Arial";
     font-size: 16px;
     font-style: italic;
-    color: white;
 }
 
 
@@ -73,10 +72,12 @@ footer {
 
 
 
-
-
-white {
+.white {
     color: white;
+}
+
+.ellow {
+    background-color: blanchedalmond;
 }
 
 header {
@@ -174,3 +175,128 @@ footer p {
 .info {
     margin-bottom: 15px;
 }
+
+@media screen and (max-width: 881px) {
+
+    .logo {
+        text-align: center;
+    }
+
+    .name p {
+        text-align: center;
+        line-height: 40px;
+
+    }
+    
+    .desk {
+        text-align: center;
+    }
+
+
+
+    .desc {
+        text-align: center;
+    }
+
+    .container {
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 90%;
+    }
+
+    .offer {
+        margin-left: 0px;
+        margin-right: 0px;
+        min-width: 400px;
+    }
+
+}
+
+@media screen and (max-device-width: 480px) {
+
+    header {
+        background: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .zag {
+        font-size: 50px;
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    .name p {
+        text-align: center;
+        line-height: 70px;
+        color: black;
+        font-size: 70px;
+        font-weight: bold;
+        margin-bottom: 15px;
+
+    }
+
+    .desc {
+        text-align: center;
+        color: black;
+        margin-bottom: 45px;
+    }
+
+    .desk {
+        display: none;
+    }
+
+    .container {
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 90%;
+    }
+
+    .offer {
+        margin-left: 0px;
+        margin-right: 0px;
+        min-width: 850px;
+        margin-top: 60px;
+    }
+
+    .smm {
+        border-top: solid #dcdcdc  2px;
+        border-bottom: solid #dcdcdc  2px;
+        Margin-bottom: 40px;
+    }
+
+    footer img {
+        width: 100px;
+    }
+
+    footer p {
+        font-size: 30px;
+        font-style: italic;
+    }
+
+
+    .menu p {
+        font-size: 32px;
+    }
+
+    .menu a {
+        text-decoration: none;
+        padding: 15px 25px 15px 25px;
+        color: black;
+        border: solid  grey 2px;
+        border-radius: 60px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    .menu a:hover {
+        background-color: blanchedalmond;
+    }
+
+
+
+}
+
+
