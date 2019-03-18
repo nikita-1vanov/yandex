@@ -1,0 +1,286 @@
+/*---------Семантика----------*/
+
+html {
+    height: 100%;
+}
+
+
+body {
+    display:flex;
+    flex-direction: column;
+
+    max-width: 1920px;
+    min-width: 560px;
+    height: 100%;
+
+    font-family: "Arial";
+    color: black;
+    font-size: 20px;
+    line-height: 1.5;
+
+    margin: auto;
+}
+
+header {
+    background: url(../image/fon1.jpg) no-repeat;
+    background-size: cover;
+}
+
+main {
+    flex-grow:1;
+}
+
+footer {
+    border-top: solid #dcdcdc 2px;
+}
+
+.container {
+    padding-left: 12%;
+    padding-right:13%;
+    width: 75%;
+    height: auto;
+}
+
+h1 {
+    font-family: "Arial";
+    font-size: 40px;
+    margin: 0px;
+    line-height: 40px;
+}
+
+/*---------FLEX----------*/
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.flex_centr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+/*---------Шрифты----------*/
+
+@font-face {
+    font-family: "Arial";
+    src:url(../fonts/arial.ttf);
+}
+
+
+
+/*---------Цвет шрифта----------*/
+
+.white {
+    color: white;
+}
+
+
+
+/*---------Цвет фона----------*/
+
+.bc_ellow {
+    background-color: blanchedalmond;
+}
+
+
+
+/*---------Тексты----------*/
+
+.zag {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.desc {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.logo {
+    font-size: 30px;
+    margin: 20px 0 0 30px;
+}
+
+
+
+/*---------Меню----------*/
+
+.menu {
+    border-bottom: solid #dcdcdc 2px;
+}
+
+.menu p {
+    font-size: 14px;
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 6px 30px 6px 30px;
+    color: black;
+    border: solid  #dcdcdc 1px;
+}
+
+.menu a:hover {
+    background-color: blanchedalmond;
+}
+
+
+
+/*---------Каталог----------*/
+
+.offers {
+    padding-bottom: 30px;
+}
+
+.offer {
+    width: 23%;
+    margin: 50px 20px 0 20px;
+    min-width: 220px;
+    cursor: pointer;
+}
+
+.offer:hover .zag {
+    color: red;
+}
+
+.offer img {
+    width: 100%;
+}
+
+
+
+/*---------Футер----------*/
+
+footer img {
+    width: 40px;
+    padding: 20px 7px 20px 7px;
+    cursor: pointer;
+}
+
+footer img:hover {
+    width: 50px;
+    padding: 15px 2px 15px 2px;
+}
+
+footer p {
+    font-size: 12px;
+    color: grey;
+    margin: 0;
+    text-align: center;
+}
+
+.info {
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 881px) {
+
+    header {
+        text-align: center;
+    }
+
+    h1 {
+        line-height: 40px;
+    }
+
+    .container {
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 90%;
+    }
+
+    .offer {
+        margin-left: 0;
+        margin-right: 0;
+        min-width: 400px;
+    }
+
+}
+
+@media screen and (max-device-width: 480px) {
+
+    header {
+        background: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .zag {
+        font-size: 50px;
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        line-height: 70px;
+        color: black;
+        font-size: 70px;
+        font-weight: bold;
+        margin: 35px 0 35px 0;
+    }
+
+    .desc {
+        text-align: center;
+        color: black;
+        margin-bottom: 45px;
+    }
+
+    .desk {
+        display: none;
+    }
+
+    .container {
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 90%;
+    }
+
+    .offer {
+        margin-left: 0;
+        margin-right: 0;
+        min-width: 850px;
+        margin-top: 60px;
+    }
+
+    .smm {
+        border-top: solid grey  2px;
+        Margin-bottom: 10px;
+    }
+
+    footer img {
+        width: 100px;
+    }
+
+    footer p {
+        font-size: 27px;
+        font-style: italic;
+    }
+
+    .menu p {
+        font-size: 32px;
+    }
+
+    .menu a {
+        text-decoration: none;
+        padding: 15px 25px 15px 25px;
+        color: black;
+        border: solid  grey 2px;
+        border-radius: 60px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    .menu a:hover {
+        background-color: blanchedalmond;
+    }
+}
