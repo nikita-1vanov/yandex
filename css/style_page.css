@@ -1,9 +1,19 @@
+/*---------Ресеты----------*/
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+div {
+    margin: 0;
+    padding:0;
+}
+
 /*---------Семантика----------*/
 
 html {
     height: 100%;
 }
-
 
 body {
     display:flex;
@@ -43,6 +53,7 @@ h1 {
     margin: 15px 0 15px 0;
     line-height: 40px;
     text-align: center;
+    font-weight: bold;
 }
 
 /*---------FLEX----------*/
@@ -70,6 +81,10 @@ h1 {
     src:url(../fonts/arial.ttf);
 }
 
+@font-face {
+    font-family: "Times";
+    src:url(../fonts/Times.ttf);
+}
 
 
 /*---------Цвет шрифта----------*/
@@ -98,6 +113,7 @@ h1 {
     font-size: 30px;
     font-weight: bold;
     margin: 50px 0 0 0;
+    text-align: left;
 
 }
 
@@ -114,13 +130,14 @@ h1 {
 .osn_text {
     text-align: justify;
     text-indent: 40px;
-
+    font-family: "Times";
 }
 
 /*---------Меню----------*/
 
 .menu {
     border-bottom: solid #dcdcdc 2px;
+    padding: 15px 0 15px 0;
 }
 
 .menu p {
@@ -217,6 +234,10 @@ footer p {
         background: none;
     }
 
+    main {
+       padding: 0 5% 0 5%;
+    }
+
     .logo {
         display: none;
     }
@@ -224,7 +245,8 @@ footer p {
     .zag {
         font-size: 50px;
         margin-bottom: 0;
-        margin-top: 10px;
+        margin-top: 50px;
+        line-height: 1;
     }
 
     h1 {
@@ -259,6 +281,10 @@ footer p {
         margin-top: 60px;
     }
 
+    .offer img {
+        width: 60%;
+    }
+
     .smm {
         border-top: solid grey  2px;
         Margin-bottom: 10px;
@@ -271,6 +297,10 @@ footer p {
     footer p {
         font-size: 27px;
         font-style: italic;
+    }
+
+    .menu {
+        margin: 30px 0 10px 0;
     }
 
     .menu p {
