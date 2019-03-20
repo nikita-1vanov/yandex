@@ -56,6 +56,34 @@ h1 {
     font-weight: bold;
 }
 
+/*---------Шапка статьи----------*/
+
+.shapka {
+    /*padding: 0 12% 0 12%;*/
+    margin: 10px 12% 30px 12%;
+    padding-top: 20px;
+}
+
+.data {
+    font-size: 18px;
+    font-style: italic;
+}
+
+.data_down {
+    display: none;
+}
+
+.shild {
+    border: 2px solid grey;
+    border-radius: 40px;
+    margin: 0 3px 0 3px;
+
+}
+
+p.shild {
+    padding: 0 20px 0  20px;
+    font-size: 12px;
+}
 /*---------FLEX----------*/
 
 .flex {
@@ -70,6 +98,14 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.flex_between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     text-align: center;
     flex-wrap: wrap;
 }
@@ -114,6 +150,7 @@ h1 {
     font-weight: bold;
     margin: 50px 0 0 0;
     text-align: left;
+    text-indent: 55px;
 
 }
 
@@ -129,7 +166,7 @@ h1 {
 
 .osn_text {
     text-align: justify;
-    text-indent: 40px;
+    text-indent: 55px;
     font-family: "Times";
 }
 
@@ -178,6 +215,19 @@ h1 {
     width: 100%;
 }
 
+/*---------Цвет бордера----------*/
+
+.br_red {
+    border-color: red;
+}
+
+.br_green {
+    border-color: green;
+}
+
+.br_aqua {
+    border-color: aqua;
+}
 
 
 /*---------Футер----------*/
@@ -210,6 +260,10 @@ footer p {
         text-align: center;
     }
 
+    main {
+        padding: 0 5% 0 5%;
+    }
+
     h1 {
         line-height: 40px;
     }
@@ -224,6 +278,15 @@ footer p {
         margin-left: 0;
         margin-right: 0;
         min-width: 400px;
+    }
+
+    div.shapka {
+        display: none;
+    }
+
+    .data_down {
+        display: block;
+        text-align: right;
     }
 
 }
@@ -244,9 +307,11 @@ footer p {
 
     .zag {
         font-size: 50px;
-        margin-bottom: 0;
+        margin-bottom: 25px;
         margin-top: 50px;
         line-height: 1;
+        text-align: center;
+        text-indent: 40px;
     }
 
     h1 {
@@ -282,7 +347,7 @@ footer p {
     }
 
     .offer img {
-        width: 60%;
+        width: 80%;
     }
 
     .smm {
@@ -292,11 +357,6 @@ footer p {
 
     footer img {
         width: 100px;
-    }
-
-    footer p {
-        font-size: 27px;
-        font-style: italic;
     }
 
     .menu {
@@ -320,4 +380,38 @@ footer p {
     .menu a:hover {
         background-color: blanchedalmond;
     }
+
+    .shapka {
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .data {
+        font-size: 14px;
+        font-style: italic;
+        text-align: right;
+    }
+
+    .data_up {
+        display: none;
+    }
+
+    .data_down {
+        display: block;
+    }
+
+    .shild {
+       display: none;
+    }
+
+    p.zag.grey {
+        text-align: left;
+        text-indent: 80px;
+    }
+
+    .osn_text {
+        text-indent: 80px;
+    }
+
 }
