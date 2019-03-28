@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel = "stylesheet" type = "text / css" href = "css/reset.css">
-    <link href="css/style_page.css" rel="stylesheet">
+    <link rel = "stylesheet" type = "text/css" href = "css/reset.css">
+    <link rel="stylesheet"   type = "text/css" href="css/style_catalog.css">
     <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
 
     <title>Web</title>
@@ -17,14 +17,212 @@
 </head>
 
 <body>
-<navigation class="container">
+
+<nav class="container">
+
     <div class="menu flex_centr">
-        <p><a href="/marketing">Маркетинг</a></p>
-        <p><a class="bc_ellow" href="web">WEB</a></p>
-        <p><a href="/grapfik">Графика</a></p>
-        <p><a href="/web">Все разделы</a></p>
+        <p><a href="#" id="box" style="background-color: white">Маркетинг</a></p>
+        <p><a href="#" id="box2" style="background-color: white">WEB</a></p>
+        <p><a href="#" id="box3" style="background-color: white">Графика</a></p>
+        <p><a href="#" id="box4" style="background-color: white">Аналитика</a></p>
     </div>
-</navigation>
+
+    <div id="market_menu" style="display: none">
+        <div class="menu flex_centr">
+            <p><a href="market">КАТЕГОРИЯ 1.1</a></p>
+            <p><a href="web">КАТЕГОРИЯ 1.2</a></p>
+            <p><a href="/grapfik">КАТЕГОРИЯ 1.3</a></p>
+            <p><a href="/grapfik">КАТЕГОРИЯ 1.4</a></p>
+            <p><a href="/grapfik">КАТЕГОРИЯ 1.5</a></p>
+            <p><a href="/web">Все разделы</a></p>
+        </div>
+    </div>
+
+    <div id="web_menu" style="display: none">
+        <div class="menu flex_centr">
+            <p><a href="market">КАТЕГОРИЯ 2.1</a></p>
+            <p><a href="web">КАТЕГОРИЯ 2.2</a></p>
+            <p><a href="/grapfik">КАТЕГОРИЯ 2.3</a></p>
+            <p><a href="/grapfik">КАТЕГОРИЯ 2.4</a></p>
+            <p><a href="/grapfik">КАТЕГОРИЯ 2.5</a></p>
+            <p><a href="/web">Все разделы</a></p>
+        </div>
+    </div>
+
+    <div id="grapfik_menu" style="display: none">
+        <div class="menu flex_centr">
+            <p><a href="market">КАТЕГОРИЯ 3.1</a></p>
+            <p><a href="web">КАТЕГОРИЯ 3.2</a></p>
+            <p><a href="/grapfik">КАТЕГОРИЯ 3.3</a></p>
+            <p><a href="/grapfik">КАТЕГОРИЯ 3.4</a></p>
+            <p><a href="/grapfik">КАТЕГОРИЯ 3.5</a></p>
+            <p><a href="/web">Все разделы</a></p>
+        </div>
+    </div>
+
+    <div id="analitics_menu" style="display: none">
+        <div class="menu flex_centr">
+            <p><a href="market">КАТЕГОРИЯ 4.1</a></p>
+            <p><a href="web">КАТЕГОРИЯ 4.2</a></p>
+            <p><a href="/grapfik">КАТЕГОРИЯ 4.3</a></p>
+            <p><a href="/grapfik">КАТЕГОРИЯ 4.4</a></p>
+            <p><a href="/grapfik">КАТЕГОРИЯ 4.5</a></p>
+            <p><a href="/web">Все разделы</a></p>
+        </div>
+    </div>
+
+</nav>
+
+<script type="text/javascript">
+
+    <!--Появление подменю-->
+
+    document.querySelector('#box').addEventListener('click', function () {
+
+        display = document.getElementById('market_menu').style.display;
+        if(display == "none") {
+            document.getElementById('market_menu').style.display="block";
+            document.getElementById('web_menu').style.display="none";
+            document.getElementById('grapfik_menu').style.display="none";
+            document.getElementById('analitics_menu').style.display="none";
+        } else {
+            document.getElementById('market_menu').style.display="none";
+            document.getElementById('web_menu').style.display="none";
+            document.getElementById('grapfik_menu').style.display="none";
+            document.getElementById('analitics_menu').style.display="none";
+        }
+    })
+
+    document.querySelector('#box2').addEventListener('click', function () {
+
+        display = document.getElementById('web_menu').style.display;
+        if(display == "none") {
+            document.getElementById('market_menu').style.display="none";
+            document.getElementById('web_menu').style.display="block";
+            document.getElementById('grapfik_menu').style.display="none";
+            document.getElementById('analitics_menu').style.display="none";
+        } else {
+            document.getElementById('market_menu').style.display="none";
+            document.getElementById('web_menu').style.display="none";
+            document.getElementById('grapfik_menu').style.display="none";
+            document.getElementById('analitics_menu').style.display="none";
+        }
+    })
+
+    document.querySelector('#box3').addEventListener('click', function () {
+
+        display = document.getElementById('grapfik_menu').style.display;
+        if(display == "none") {
+            document.getElementById('market_menu').style.display="none";
+            document.getElementById('web_menu').style.display="none";
+            document.getElementById('grapfik_menu').style.display="block";
+            document.getElementById('analitics_menu').style.display="none";
+        } else {
+            document.getElementById('market_menu').style.display="none";
+            document.getElementById('web_menu').style.display="none";
+            document.getElementById('grapfik_menu').style.display="none";
+            document.getElementById('analitics_menu').style.display="none";
+        }
+    })
+
+    document.querySelector('#box4').addEventListener('click', function () {
+
+        display = document.getElementById('analitics_menu').style.display;
+        if(display == "none") {
+            document.getElementById('market_menu').style.display="none";
+            document.getElementById('web_menu').style.display="none";
+            document.getElementById('grapfik_menu').style.display="none";
+            document.getElementById('analitics_menu').style.display="block";
+        } else {
+            document.getElementById('market_menu').style.display="none";
+            document.getElementById('web_menu').style.display="none";
+            document.getElementById('grapfik_menu').style.display="none";
+            document.getElementById('analitics_menu').style.display="none";
+        }
+    })
+
+    <!--Цвет кнопки при нажатии-->
+
+    document.querySelector('#box').addEventListener('click', function () {
+
+        display = document.getElementById('box').style.display;
+        if(display == "none") {
+            document.getElementById('box').style.backgroundColor="white";
+            document.getElementById('box2').style.backgroundColor="white";
+            document.getElementById('box3').style.backgroundColor="white";
+            document.getElementById('box4').style.backgroundColor="white";
+        } else {
+            document.getElementById('box').style.backgroundColor="blanchedalmond";
+            document.getElementById('box2').style.backgroundColor="white";
+            document.getElementById('box3').style.backgroundColor="white";
+            document.getElementById('box4').style.backgroundColor="white";
+        }
+    })
+
+    document.querySelector('#box').addEventListener('click', function () {
+
+        display = document.getElementById('box').style.display;
+        if(display == "none") {
+            document.getElementById('box').style.backgroundColor="white";
+            document.getElementById('box2').style.backgroundColor="white";
+            document.getElementById('box3').style.backgroundColor="white";
+            document.getElementById('box4').style.backgroundColor="white";
+        } else {
+            document.getElementById('box').style.backgroundColor="blanchedalmond";
+            document.getElementById('box2').style.backgroundColor="white";
+            document.getElementById('box3').style.backgroundColor="white";
+            document.getElementById('box4').style.backgroundColor="white";
+        }
+    })
+
+    document.querySelector('#box2').addEventListener('click', function () {
+
+        display = document.getElementById('box2').style.display;
+        if(display == "none") {
+            document.getElementById('box').style.backgroundColor="white";
+            document.getElementById('box2').style.backgroundColor="white";
+            document.getElementById('box3').style.backgroundColor="white";
+            document.getElementById('box4').style.backgroundColor="white";
+        } else {
+            document.getElementById('box').style.backgroundColor="white";
+            document.getElementById('box2').style.backgroundColor="blanchedalmond";
+            document.getElementById('box3').style.backgroundColor="white";
+            document.getElementById('box4').style.backgroundColor="white";
+        }
+    })
+
+    document.querySelector('#box3').addEventListener('click', function () {
+
+        display = document.getElementById('box3').style.display;
+        if(display == "none") {
+            document.getElementById('box').style.backgroundColor="white";
+            document.getElementById('box2').style.backgroundColor="white";
+            document.getElementById('box3').style.backgroundColor="white";
+            document.getElementById('box4').style.backgroundColor="white";
+        } else {
+            document.getElementById('box').style.backgroundColor="white";
+            document.getElementById('box2').style.backgroundColor="white";
+            document.getElementById('box3').style.backgroundColor="blanchedalmond";
+            document.getElementById('box4').style.backgroundColor="white";
+        }
+    })
+
+    document.querySelector('#box4').addEventListener('click', function () {
+
+        display = document.getElementById('box4').style.display;
+        if(display == "none") {
+            document.getElementById('box').style.backgroundColor="white";
+            document.getElementById('box2').style.backgroundColor="white";
+            document.getElementById('box3').style.backgroundColor="white";
+            document.getElementById('box4').style.backgroundColor="white";
+        } else {
+            document.getElementById('box').style.backgroundColor="white";
+            document.getElementById('box2').style.backgroundColor="white";
+            document.getElementById('box3').style.backgroundColor="white";
+            document.getElementById('box4').style.backgroundColor="blanchedalmond";
+        }
+    })
+</script>
 
     <header class="container">
         <div class="flex_between shapka">
@@ -32,9 +230,8 @@
                 <p class="data data_up grey">18.03.2019</p>
             </div>
             <div class="flex">
-            <p class="shild br_red">Информационные технологии</p>
-            <p class="shild br_aqua">ПО</p>
-            <p class="shild br_green">Разработка</p>
+            <p class="data data_up grey">Время чтения 7 минут</p>
+
             </div>
         </div>
         <h1>Красивое название статьи с SEO оптимизацией<br>и другими плюшками</h1>

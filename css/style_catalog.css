@@ -1,14 +1,3 @@
-/*---------Ресеты----------*/
-p {
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-
-div {
-    margin: 0;
-    padding:0;
-}
-
 /*---------Семантика----------*/
 
 html {
@@ -31,9 +20,10 @@ body {
     margin: auto;
 }
 
-header {
+.header {
     background: url(../image/fon1.jpg) no-repeat;
     background-size: cover;
+    padding-bottom: 50px;
 }
 
 main {
@@ -52,10 +42,9 @@ footer {
 }
 
 h1 {
-    font-family: "Arial";
-    font-size: 40px;
-    margin: 20px 0 30px 0 ;
-    line-height: 40px;
+    font-size: 45px;
+    margin: 20px 0 20px 0 ;
+    line-height: 50px;
 }
 
 /*---------FLEX----------*/
@@ -105,12 +94,10 @@ h1 {
 
 .zag {
     font-size: 20px;
-    font-weight: bold;
 }
 
 .desc {
     font-size: 16px;
-    font-style: italic;
 }
 
 .desk {
@@ -118,37 +105,60 @@ h1 {
 }
 
 .logo {
-    font-size: 30px;
-    margin: 20px 0 0 40px;
+    font-size: 23px;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
+.b {
+    font-weight: bold;
+}
 
+.i {
+    font-style: italic;
+}
 
 /*---------Меню----------*/
 
 .menu {
-    border-bottom: solid #dcdcdc 2px;
-    padding: 15px 0 15px 0;
+    border-bottom: solid #dcdcdc 1px;
+    padding: 7px 0 7px 0;
 }
 
 .menu p {
-    font-size: 14px;
+    margin: 10px 0 10px 0;
 }
 
 .menu a {
     text-decoration: none;
-    padding: 6px 30px 6px 30px;
+    padding: 6px 20px 6px 20px;
     color: black;
     border: solid  #dcdcdc 1px;
+    font-size: 15px;
 }
 
 .menu a:hover {
     background-color: blanchedalmond;
 }
 
+.vipad_menu {
+    display: none;
+    border-bottom: solid #dcdcdc 1px;
+    padding: 10px 0 10px 0;
+}
+
+select, option {
+    padding: 6px 20px 6px 20px;
+    color: black;
+    border: solid  #dcdcdc 1px;
+    font-size: 15px;
+    background-color: white;
+    text-align: center;
+}
 
 
-/*---------Каталог----------*/
+
+    /*---------Каталог----------*/
 
 .offers {
     padding-bottom: 30px;
@@ -195,7 +205,7 @@ footer p {
     margin-bottom: 15px;
 }
 
-@media screen and (max-width: 881px) {
+@media screen and (max-width: 900px) {
 
     header {
         text-align: center;
@@ -217,12 +227,25 @@ footer p {
         min-width: 400px;
     }
 
+    .offer img {
+        width: 80%;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .vipad_menu {
+        display: block;
+    }
+
 }
 
 @media screen and (max-device-width: 480px) {
 
-    header {
+    .header {
         background: none;
+        padding-bottom: 0;
     }
 
     body    {
@@ -244,7 +267,6 @@ footer p {
         line-height: 70px;
         color: black;
         font-size: 70px;
-        font-weight: bold;
         margin: 35px 0 35px 0;
     }
 
@@ -252,6 +274,7 @@ footer p {
         text-align: center;
         color: black;
         margin-bottom: 45px;
+        font-size: 35px;
     }
 
     .desk {
@@ -273,23 +296,24 @@ footer p {
 
     .smm {
         border-top: solid grey  2px;
-        Margin-bottom: 10px;
+        margin-bottom: 10px;
     }
 
     footer img {
-        width: 100px;
+        width: 80px;
     }
 
     footer p {
         font-size: 27px;
     }
 
-    .menu {
+   /* .menu {
         margin: 20px 0 20px 0;
     }
 
     .menu p {
-        font-size: 32px;
+
+        margin: 20px 5px 20px 5px;
     }
 
     .menu a {
@@ -298,11 +322,40 @@ footer p {
         color: black;
         border: solid  grey 2px;
         border-radius: 60px;
-        margin-right: 5px;
-        margin-left: 5px;
+        margin: 0 5px 0 5px;
+        font-size: 30px;
     }
 
     .menu a:hover {
         background-color: blanchedalmond;
+    } */
+
+    .offer img {
+        width: 75%;
     }
+
+    .menu {
+        display: none;
+    }
+
+    .vipad_menu {
+        display: block;
+    }
+
+    select {
+        padding: 10px 20px 10px 20px;
+        color: black;
+        border: solid  dimgrey 3px;
+        border-radius: 10px;
+        font-size: 40px;
+        background-color: white;
+
+    select:hover {
+        background-color: white;
+    }
+
+    option:hover {
+        background-color: white;
+        }
 }
+    }

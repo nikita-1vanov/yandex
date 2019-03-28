@@ -14,85 +14,294 @@
     <meta name="description" content="Интернет магазин Сима-ленд - купить сувениры и подарки оптом и в розницу.
     Огромный каталог - более 500 000 наименований для поставок в Москву, Екатеринбург, Санкт-Петербург, по России,
     странам СНГ и Европе">
-    <link href="https://www.sima-land.ru/" rel="canonical">
+    <link href="https://site.ru/" rel="canonical">
 </head>
 
 <body>
 
-    <header class="container white">
-        <div>
-            <div class="logo"><p>Logotip</p></div>
-            <h1>Интернет магазин<br>Название магазина</h1>
-            <div class="desk"><p>Магазин работает с 10:00 до 22:00, без выходных<br>
-                Музей — с 10:00 до 19:00, понедельник выходной<br>
-                Москва, ул. Тимура Фрунзе, д. 11, стр. 13<br>
-                Метро «Парк культуры»</p></div>
-
+    <header class="header container white">
+        <div class="logo">
+            <p>WEBano</p>
+        </div>
+        <h1>Интернет магазин<br> с определенной нишей</h1>
+        <div class="desk">
+            <p>Магазин работает с 10:00 до 22:00, без выходных<br>
+            Музей — с 10:00 до 19:00, понедельник выходной<br>
+            Москва, ул. Тимура Фрунзе, д. 11, стр. 13<br>
+            Метро «Парк культуры»</p>
+        </div>
     </header>
 
-    <navigation class="container">
+    <nav class="container">
+
             <div class="menu flex_centr">
-                    <p><a href="/marketing">Маркетинг</a></p>
-                    <p><a href="web">WEB</a></p>
-                    <p><a href="/grapfik">Графика</a></p>
-                    <p><a class="bc_ellow" href="/web">Все разделы</a></p>
+                <p><a href="#" id="box" style="background-color: white">Для маркетологов</a></p>
+                <p><a href="#" id="box2" style="background-color: white">Для программистов</a></p>
+                <p><a href="#" id="box3" style="background-color: white">Для дизайнеров</a></p>
+                <p><a href="#" id="box4" style="background-color: white">Для аналитиков</a></p>
             </div>
-    </navigation>
+
+
+        <script type="text/javascript">
+            // задаем массив ссылок
+            const links = [];
+            links['Marketolog_menu'] = 'web';
+            links['WEB_menu'] = 'web';
+            links['Disagn_menu'] = 'web';
+            links['Analytics_menu'] = 'web';
+        </script>
+
+            <div class="vipad_menu flex_centr"">
+                <select onchange="if (this.value) top.location.href=links[this.value];">
+                    <option ><a>Выбрать раздел</a></option>
+
+                    <option value="Marketolog_menu">Для маркетологов</option>
+
+                    <option value="WEB_menu">Для программистов</option>
+
+                    <option value="Disagn_menu">Для дизайнеров</option>
+
+                    <option value="Analytics_menu">Для аналитиков</option>
+                </select>
+
+            </div>
+
+            <div id="market_menu" style="display: none">
+                <div class="menu flex_centr">
+                    <p><a href="market">КАТЕГОРИЯ 1.1</a></p>
+                    <p><a href="web">КАТЕГОРИЯ 1.2</a></p>
+                    <p><a href="/grapfik">КАТЕГОРИЯ 1.3</a></p>
+                    <p><a href="/grapfik">КАТЕГОРИЯ 1.4</a></p>
+                    <p><a href="/grapfik">КАТЕГОРИЯ 1.5</a></p>
+                    <p><a href="/web">Все разделы</a></p>
+                </div>
+            </div>
+
+            <div id="web_menu" style="display: none">
+                <div class="menu flex_centr">
+                    <p><a href="market">КАТЕГОРИЯ 2.1</a></p>
+                    <p><a href="web">КАТЕГОРИЯ 2.2</a></p>
+                    <p><a href="/grapfik">КАТЕГОРИЯ 2.3</a></p>
+                    <p><a href="/grapfik">КАТЕГОРИЯ 2.4</a></p>
+                    <p><a href="/grapfik">КАТЕГОРИЯ 2.5</a></p>
+                    <p><a href="/web">Все разделы</a></p>
+                </div>
+            </div>
+
+            <div id="grapfik_menu" style="display: none">
+                <div class="menu flex_centr">
+                    <p><a href="market">КАТЕГОРИЯ 3.1</a></p>
+                    <p><a href="web">КАТЕГОРИЯ 3.2</a></p>
+                    <p><a href="/grapfik">КАТЕГОРИЯ 3.3</a></p>
+                    <p><a href="/grapfik">КАТЕГОРИЯ 3.4</a></p>
+                    <p><a href="/grapfik">КАТЕГОРИЯ 3.5</a></p>
+                    <p><a href="/web">Все разделы</a></p>
+                </div>
+            </div>
+
+            <div id="analitics_menu" style="display: none">
+                <div class="menu flex_centr">
+                    <p><a href="market">Яндекс.Метрика</a></p>
+                    <p><a href="web">Google Аналитикс</a></p>
+                    <p><a href="/grapfik">Google Tag Manager</a></p>
+                    <p><a href="/grapfik">КАТЕГОРИЯ 4.4</a></p>
+                    <p><a href="/grapfik">КАТЕГОРИЯ 4.5</a></p>
+                    <p><a href="/web">Все разделы</a></p>
+                </div>
+            </div>
+
+    </nav>
+
+    <script type="text/javascript">
+
+        <!--Появление подменю-->
+
+        document.querySelector('#box').addEventListener('click', function () {
+
+            display = document.getElementById('market_menu').style.display;
+            if(display == "none") {
+                document.getElementById('market_menu').style.display="block";
+                document.getElementById('web_menu').style.display="none";
+                document.getElementById('grapfik_menu').style.display="none";
+                document.getElementById('analitics_menu').style.display="none";
+            } else {
+                document.getElementById('market_menu').style.display="none";
+                document.getElementById('web_menu').style.display="none";
+                document.getElementById('grapfik_menu').style.display="none";
+                document.getElementById('analitics_menu').style.display="none";
+            }
+        })
+
+        document.querySelector('#box2').addEventListener('click', function () {
+
+            display = document.getElementById('web_menu').style.display;
+            if(display == "none") {
+                document.getElementById('market_menu').style.display="none";
+                document.getElementById('web_menu').style.display="block";
+                document.getElementById('grapfik_menu').style.display="none";
+                document.getElementById('analitics_menu').style.display="none";
+            } else {
+                document.getElementById('market_menu').style.display="none";
+                document.getElementById('web_menu').style.display="none";
+                document.getElementById('grapfik_menu').style.display="none";
+                document.getElementById('analitics_menu').style.display="none";
+            }
+        })
+
+        document.querySelector('#box3').addEventListener('click', function () {
+
+            display = document.getElementById('grapfik_menu').style.display;
+            if(display == "none") {
+                document.getElementById('market_menu').style.display="none";
+                document.getElementById('web_menu').style.display="none";
+                document.getElementById('grapfik_menu').style.display="block";
+                document.getElementById('analitics_menu').style.display="none";
+            } else {
+                document.getElementById('market_menu').style.display="none";
+                document.getElementById('web_menu').style.display="none";
+                document.getElementById('grapfik_menu').style.display="none";
+                document.getElementById('analitics_menu').style.display="none";
+            }
+        })
+
+        document.querySelector('#box4').addEventListener('click', function () {
+
+            display = document.getElementById('analitics_menu').style.display;
+            if(display == "none") {
+                document.getElementById('market_menu').style.display="none";
+                document.getElementById('web_menu').style.display="none";
+                document.getElementById('grapfik_menu').style.display="none";
+                document.getElementById('analitics_menu').style.display="block";
+            } else {
+                document.getElementById('market_menu').style.display="none";
+                document.getElementById('web_menu').style.display="none";
+                document.getElementById('grapfik_menu').style.display="none";
+                document.getElementById('analitics_menu').style.display="none";
+            }
+        })
+
+        <!--Цвет кнопки при нажатии-->
+
+            document.querySelector('#box').addEventListener('click', function () {
+
+             display = document.getElementById('box').style.display;
+                if(display == "none") {
+                 document.getElementById('box').style.backgroundColor="white";
+                 document.getElementById('box2').style.backgroundColor="white";
+                 document.getElementById('box3').style.backgroundColor="white";
+                 document.getElementById('box4').style.backgroundColor="white";
+             } else {
+                 document.getElementById('box').style.backgroundColor="blanchedalmond";
+                 document.getElementById('box2').style.backgroundColor="white";
+                 document.getElementById('box3').style.backgroundColor="white";
+                 document.getElementById('box4').style.backgroundColor="white";
+                }
+            })
+
+             document.querySelector('#box2').addEventListener('click', function () {
+
+                    display = document.getElementById('box2').style.display;
+                    if(display == "none") {
+                document.getElementById('box').style.backgroundColor="white";
+                document.getElementById('box2').style.backgroundColor="white";
+                document.getElementById('box3').style.backgroundColor="white";
+                document.getElementById('box4').style.backgroundColor="white";
+                    } else {
+                document.getElementById('box').style.backgroundColor="white";
+                document.getElementById('box2').style.backgroundColor="blanchedalmond";
+                document.getElementById('box3').style.backgroundColor="white";
+                document.getElementById('box4').style.backgroundColor="white";
+                    }
+                })
+
+            document.querySelector('#box3').addEventListener('click', function () {
+
+            display = document.getElementById('box3').style.display;
+            if(display == "none") {
+                document.getElementById('box').style.backgroundColor="white";
+                document.getElementById('box2').style.backgroundColor="white";
+                document.getElementById('box3').style.backgroundColor="white";
+                document.getElementById('box4').style.backgroundColor="white";
+            } else {
+                document.getElementById('box').style.backgroundColor="white";
+                document.getElementById('box2').style.backgroundColor="white";
+                document.getElementById('box3').style.backgroundColor="blanchedalmond";
+                document.getElementById('box4').style.backgroundColor="white";
+            }
+            })
+
+            document.querySelector('#box4').addEventListener('click', function () {
+
+            display = document.getElementById('box4').style.display;
+            if(display == "none") {
+                document.getElementById('box').style.backgroundColor="white";
+                document.getElementById('box2').style.backgroundColor="white";
+                document.getElementById('box3').style.backgroundColor="white";
+                document.getElementById('box4').style.backgroundColor="white";
+            } else {
+                document.getElementById('box').style.backgroundColor="white";
+                document.getElementById('box2').style.backgroundColor="white";
+                document.getElementById('box3').style.backgroundColor="white";
+                document.getElementById('box4').style.backgroundColor="blanchedalmond";
+            }
+            })
+
+    </script>
 
     <main class="container">
         <div class ="offers flex">
             <div class="offer">
                 <img src="image/off.jpeg" alt="Товар 1">
-                <p class="zag">Красиврое название товара</p>
-                <p class="desc">Красивое описание товара с использованием красивых слов, словосочетании и афоризмов</p>
+                <p class="zag b">Красиврое название товара</p>
+                <p class="desc i">Красивое описание товара с использованием красивых слов, словосочетании и афоризмов</p>
+            </div>
+
+            <div class="offer">
+                <img src="image/off.jpeg" alt="Товар 1">
+                <p class="zag b">Красиврое название товара</p>
+                <p class="desc i">Красивое описание товара с использованием красивых слов, словосочетании и афоризмов</p>
+            </div>
+
+            <div class="offer">
+                <img src="image/off.jpeg" alt="Товар 1">
+                <p class="zag b">Красиврое название товара</p>
+                <p class="desc i">Красивое описание товара с использованием красивых слов, словосочетании и афоризмов</p>
+            </div>
+
+            <div class="offer">
+                <img src="image/off.jpeg" alt="Товар 1">
+                <p class="zag b">Красиврое название товара</p>
+                <p class="desc i">Красивое описание товара с использованием красивых слов, словосочетании и афоризмов</p>
+            </div>
+
+            <div class="offer">
+                <img src="image/off.jpeg" alt="Товар 1">
+                <p class="zag b">Красиврое название товара</p>
+                <p class="desc i">Красивое описание товара с использованием красивых слов, словосочетании и афоризмов</p>
+            </div>
+
+            <div class="offer">
+                <img src="image/off.jpeg" alt="Товар 1">
+                <p class="zag b">Красиврое название товара</p>
+                <p class="desc i">Красивое описание товара с использованием красивых слов, словосочетании и афоризмов</p>
             </div>
 
             <div class="offer">
                 <img src="image/off.jpeg" alt="Товар 1">
                 <p class="zag">Красиврое название товара</p>
-                <p class="desc">Красивое описание товара с использованием красивых слов, словосочетании и афоризмов</p>
+                <p class="desc i">Красивое описание товара с использованием красивых слов, словосочетании и афоризмов</p>
             </div>
 
             <div class="offer">
                 <img src="image/off.jpeg" alt="Товар 1">
-                <p class="zag">Красиврое название товара</p>
-                <p class="desc">Красивое описание товара с использованием красивых слов, словосочетании и афоризмов</p>
+                <p class="zag b">Красиврое название товара</p>
+                <p class="desc i">Красивое описание товара с использованием красивых слов, словосочетании и афоризмов</p>
             </div>
 
             <div class="offer">
                 <img src="image/off.jpeg" alt="Товар 1">
-                <p class="zag">Красиврое название товара</p>
-                <p class="desc">Красивое описание товара с использованием красивых слов, словосочетании и афоризмов</p>
-            </div>
-
-            <div class="offer">
-                <img src="image/off.jpeg" alt="Товар 1">
-                <p class="zag">Красиврое название товара</p>
-                <p class="desc">Красивое описание товара с использованием красивых слов, словосочетании и афоризмов</p>
-            </div>
-
-            <div class="offer">
-                <img src="image/off.jpeg" alt="Товар 1">
-                <p class="zag">Красиврое название товара</p>
-                <p class="desc">Красивое описание товара с использованием красивых слов, словосочетании и афоризмов</p>
-            </div>
-
-            <div class="offer">
-                <img src="image/off.jpeg" alt="Товар 1">
-                <p class="zag">Красиврое название товара</p>
-                <p class="desc">Красивое описание товара с использованием красивых слов, словосочетании и афоризмов</p>
-            </div>
-
-            <div class="offer">
-                <img src="image/off.jpeg" alt="Товар 1">
-                <p class="zag">Красиврое название товара</p>
-                <p class="desc">Красивое описание товара с использованием красивых слов, словосочетании и афоризмов</p>
-            </div>
-
-            <div class="offer">
-                <img src="image/off.jpeg" alt="Товар 1">
-                <p class="zag">Красиврое название товара</p>
-                <p class="desc">Красивое описание товара с использованием красивых слов, словосочетании и афоризмов</p>
+                <p class="zag b">Красиврое название товара</p>
+                <p class="desc i">Красивое описание товара с использованием красивых слов, словосочетании и афоризмов</p>
             </div>
         </div>
 
@@ -112,6 +321,8 @@
             <p>ИНН 6268293456</p>
         </div>
     </footer>
+
+
 
 </body>
 </html>

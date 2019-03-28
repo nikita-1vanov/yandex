@@ -1,14 +1,3 @@
-/*---------Ресеты----------*/
-p {
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-
-div {
-    margin: 0;
-    padding:0;
-}
-
 /*---------Семантика----------*/
 
 html {
@@ -31,6 +20,12 @@ body {
     margin: auto;
 }
 
+.header {
+    background: url(../image/fon1.jpg) no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+}
+
 main {
     flex-grow:1;
     padding: 0 20% 0 20%;
@@ -48,12 +43,9 @@ footer {
 }
 
 h1 {
-    font-family: "Arial";
     font-size: 40px;
-    margin: 15px 0 15px 0;
+    margin: 20px 0 30px 0 ;
     line-height: 40px;
-    text-align: center;
-    font-weight: bold;
 }
 
 /*---------Шапка статьи----------*/
@@ -174,11 +166,12 @@ p.shild {
 
 .menu {
     border-bottom: solid #dcdcdc 2px;
-    padding: 15px 0 15px 0;
+    padding: 5px 0 5px 0;
 }
 
 .menu p {
     font-size: 14px;
+   margin: 10px 0 10px 0;
 }
 
 .menu a {
@@ -365,6 +358,7 @@ footer p {
 
     .menu p {
         font-size: 32px;
+        margin: 20px 5px 20px 5px;
     }
 
     .menu a {
